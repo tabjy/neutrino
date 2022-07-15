@@ -19,7 +19,7 @@ public class Entrypoint {
         System.out.println(exec(args[0]));
     }
 
-    @CEntryPoint(name = "ca_uwaterloo_cs854s22_neutrino_handler_entrypoint")
+    @CEntryPoint(name = "neutrino_handler_entrypoint")
     public static CCharPointer entrypoint(@CEntryPoint.IsolateThreadContext IsolateThread thread, CCharPointer inputPointer) {
         String input = CTypeConversion.toJavaString(inputPointer);
         String output = exec(input);

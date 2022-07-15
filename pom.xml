@@ -20,6 +20,7 @@
 
     <modules>
         <module>neutrino-runtime</module>
+        <module>neutrino-native</module>
         <module>neutrino-handler</module>
     </modules>
 

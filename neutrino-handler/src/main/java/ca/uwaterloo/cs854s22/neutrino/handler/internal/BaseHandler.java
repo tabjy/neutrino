@@ -5,12 +5,11 @@ import com.google.gson.*;
 public class BaseHandler {
 
     protected BaseHandler() {
-
     }
 
     public JsonElement handle(JsonElement element) {
         if (element.isJsonNull()) {
-            return this.handle((JsonNull) element);
+            return this.handle();
         }
 
         if (element.isJsonPrimitive()) {
@@ -28,7 +27,7 @@ public class BaseHandler {
         throw new UnsupportedOperationException("unexpected JsonElement type!");
     }
 
-    public JsonElement handle(JsonNull nil) {
+    public JsonElement handle() {
         throw new UnsupportedOperationException("handler not implemented!");
     }
 

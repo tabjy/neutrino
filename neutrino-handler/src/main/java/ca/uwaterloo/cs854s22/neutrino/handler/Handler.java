@@ -7,19 +7,9 @@ import com.google.gson.JsonPrimitive;
 
 public class Handler extends BaseHandler {
     @Override
-    // addition
-    public JsonElement handle(JsonObject object) {
-        int a = object.get("a").getAsInt();
-        int b = object.get("b").getAsInt();
-
+    public JsonElement handle() {
         JsonObject result = new JsonObject();
-        result.add("result", new JsonPrimitive(a + b));
+        result.add("hello", new JsonPrimitive("world"));
         return result;
-    }
-
-    @Override
-    // echo
-    public JsonElement handle(String input) {
-        return new JsonPrimitive(input);
     }
 }
