@@ -7,6 +7,9 @@ import org.graalvm.nativeimage.c.type.CTypeConversion;
 
 public class Entrypoint {
 
+    public static void main(String[] args) {
+        // dummy main function
+    }
 
     @CEntryPoint(name = "neutrino_handler_entrypoint")
     public static CCharPointer entrypoint(@CEntryPoint.IsolateThreadContext IsolateThread thread, CCharPointer inputPointer) {
