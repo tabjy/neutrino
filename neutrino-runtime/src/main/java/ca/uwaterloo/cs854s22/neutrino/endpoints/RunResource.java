@@ -31,7 +31,7 @@ public class RunResource {
     @Consumes()
     @Produces(MediaType.APPLICATION_JSON)
     @Blocking
-    public String run(String function) {
+    public String run(String function, String body) {
         logger.info("running function " + function);
 
         Registry.FunctionPointers pointers = registry.getEntry(function);
@@ -41,6 +41,6 @@ public class RunResource {
 //                pointers.detachAndTearDownIsolate.rawValue(),
 //                pointers.entrypoint.rawValue()
 //                );
-        return sandboxes.run(pointers, "");
+        return sandboxes.run(pointers, body);
     }
 }
