@@ -2,6 +2,10 @@
 
 a lightweight sandbox implementation for serverless computing powered by Graal Native Image and Substrate VM isolates
 
+[See details in our paper](./.github/CS854_Neutrino.pdf)
+
+---
+
 ![architecture](./.github/images/architecture.png)
 
 ## Build
